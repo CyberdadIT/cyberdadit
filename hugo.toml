@@ -1,0 +1,65 @@
+baseURL = "https://cyberdadit.com/"
+languageCode = "en-us"
+title = "James Ebiloma - Cybersecurity Portfolio"
+
+[params]
+  author = "James Ebiloma"
+  description = "Cybersecurity Professional & Enthusiast"
+  tagline = "Learning cybersecurity and sharing my progress with the world!"
+  formspreeID = "YOUR_FORM_ID"
+
+  [params.social]
+    github = "https://github.com/yourusername"
+    linkedin = "https://linkedin.com/in/yourusername"
+    twitter = "https://twitter.com/yourusername"
+
+  [[params.technicalSkills]]
+    name = "Network Security"
+  [[params.technicalSkills]]
+    name = "Penetration Testing"
+  [[params.technicalSkills]]
+    name = "Linux/Unix"
+  [[params.technicalSkills]]
+    name = "Python Scripting"
+  [[params.technicalSkills]]
+    name = "Web Application Security"
+  [[params.technicalSkills]]
+    name = "Cryptography"
+
+  [[params.tools]]
+    name = "Nmap, Wireshark"
+  [[params.tools]]
+    name = "Metasploit Framework"
+  [[params.tools]]
+    name = "Burp Suite"
+  [[params.tools]]
+    name = "John the Ripper"
+  [[params.tools]]
+    name = "Kali Linux"
+  [[params.tools]]
+    name = "Git & GitHub"
+
+  [[params.timeline]]
+    title = "The Beginning"
+    date = "Month Year"
+    description = "Started my journey into cybersecurity. Discovered my passion for ethical hacking and protecting digital assets. Currently learning the fundamentals of network security and penetration testing."
+
+  [[params.timeline]]
+    title = "Learning Phase"
+    date = "Month Year"
+    description = "Diving deep into TryHackMe, HackTheBox, and various online resources. Building hands-on skills in vulnerability assessment and security tools."
+
+  [[params.timeline]]
+    title = "Current Focus"
+    date = "Present"
+    description = "Working on real-world projects, documenting my learning, and contributing to the security community. Preparing for certifications and building a professional portfolio."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML"]
+
+[taxonomies]

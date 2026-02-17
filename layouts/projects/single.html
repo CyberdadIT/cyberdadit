@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article class="blog-post" style="max-width: 800px; margin: 120px auto; padding: 0 2rem;">
+    <div class="blog-post-header">
+        <a href="{{ "/" | relURL }}#projects" class="blog-back-link" style="color: var(--primary-color); font-family: var(--font-mono); text-decoration: none; display: inline-block; margin-bottom: 2rem;">← Back to Projects</a>
+        <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; background: var(--gradient-2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">{{ .Title }}</h1>
+        <div class="project-tags" style="margin-bottom: 2rem;">
+            {{ range .Params.tags }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="blog-post-content" style="color: var(--text-secondary); line-height: 1.9; font-size: 1.1rem;">
+        {{ .Content }}
+    </div>
+
+    <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+        <a href="{{ "/" | relURL }}#projects" class="btn btn-secondary">← Back to Portfolio</a>
+    </div>
+</article>
+{{ end }}

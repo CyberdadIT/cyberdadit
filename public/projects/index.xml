@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on James Ebiloma - Cybersecurity Portfolio</title><link>https://cyberdadit.com/projects/</link><description>Recent content in Projects on James Ebiloma - Cybersecurity Portfolio</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://cyberdadit.com/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>Network Scanner Tool</title><link>https://cyberdadit.com/projects/network-scanner/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cyberdadit.com/projects/network-scanner/</guid><description>&lt;p&gt;A Python-based network scanning tool that identifies active hosts, open ports, and running services. Features multi-threading for faster scans and detailed reporting.&lt;/p&gt;
+&lt;h2 id="features"&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Multi-threaded port scanning for fast results&lt;/li&gt;
+&lt;li&gt;Service version detection&lt;/li&gt;
+&lt;li&gt;OS fingerprinting&lt;/li&gt;
+&lt;li&gt;Export results to CSV and JSON&lt;/li&gt;
+&lt;li&gt;Interactive CLI interface&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="how-it-works"&gt;How It Works&lt;/h2&gt;
+&lt;p&gt;The tool leverages Python&amp;rsquo;s &lt;code&gt;socket&lt;/code&gt; library combined with threading to perform concurrent port scans across target hosts. Results are parsed and formatted into detailed reports.&lt;/p&gt;</description></item><item><title>Password Strength Checker</title><link>https://cyberdadit.com/projects/password-checker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cyberdadit.com/projects/password-checker/</guid><description>&lt;p&gt;Web application that analyzes password strength using entropy calculations, common pattern detection, and breach database checks.&lt;/p&gt;</description></item><item><title>Vulnerable Web App Lab</title><link>https://cyberdadit.com/projects/vulnerable-webapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cyberdadit.com/projects/vulnerable-webapp/</guid><description>&lt;p&gt;Practice environment demonstrating common web vulnerabilities (XSS, SQL Injection, CSRF) for learning purposes. Built with intentional security flaws.&lt;/p&gt;</description></item></channel></rss>

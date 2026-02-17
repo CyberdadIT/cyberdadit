@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; 
+                   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; 
+                   font-src 'self' https://fonts.gstatic.com data:; 
+                   script-src 'self' 'unsafe-inline'; 
+                   img-src 'self' data: https:; 
+                   connect-src 'self' https://formspree.io; 
+                   form-action 'self' https://formspree.io;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    {{ $styles := resources.Get "css/styles.css" | minify }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+</head>
+<body>
+    {{- partial "nav.html" . -}}
+
+    {{ block "main" . }}{{ end }}
+
+    {{- partial "footer.html" . -}}
+
+    <!-- Noscript fallback -->
+    <noscript>
+        <style>
+            .project-card, .blog-card, .timeline-item, .skill-category {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            .typing-text { visibility: visible !important; }
+        </style>
+    </noscript>
+
+    {{ $script := resources.Get "js/script.js" | minify }}
+    <script src="{{ $script.RelPermalink }}"></script>
+</body>
+</html>

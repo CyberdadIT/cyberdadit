@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="blog" style="padding-top: 120px;">
+    <div class="container">
+        <h2 class="section-title">
+            <span class="title-number">//</span>
+            All Articles
+        </h2>
+        <div class="blog-grid">
+            {{ range .Pages }}
+            <article class="blog-card">
+                <div class="blog-image">
+                    <div class="blog-category">{{ .Params.category | default "Article" }}</div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+                        <span class="blog-reading-time">{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+                    </div>
+                    <h3 class="blog-title">{{ .Title }}</h3>
+                    <p class="blog-excerpt">{{ .Params.excerpt | default .Summary }}</p>
+                    <a href="{{ .RelPermalink }}" class="blog-read-more">Read Article →</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
